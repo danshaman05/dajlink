@@ -1,3 +1,14 @@
+dajlink.tk
+************************************************************
+- Rozcestnik matfyzaka
+
+Stránka určená študentom aplikovanej informatiky na matfyze.
+
+************************************************************
+
+NOTES:
+************************************************************
+
 stranka bude obsahovat:
 
 
