@@ -1,0 +1,72 @@
+header {
+    /* background-color: orange; 
+    font-size: 4em; */
+    min-height: 300px;
+    max-height: 300px;
+    
+
+    background-color: orange;
+    font-size: 2em;
+
+}
+
+#logo{
+    width: 10%;
+}
+
+#site_name {
+   width: 75%;
+   font-size: 1.75em;
+}
+
+#login {
+    width: 75%;
+    float: left;
+    font-size: 1.25em;
+}
+
+nav {
+    width: 95%;
+    margin: 5%;
+}
+
+nav a {
+    width: 28%;
+    padding: 1%;
+    margin: 1%;
+    font-size: 2.5em;
+}
+
+
+#div1 a, #div2 a {
+    display: block; 
+    width: 80%;
+    height: 40px; 
+
+    font-size: 3.25em;
+
+}
+
+#div3 a {
+    width: 80%;
+    height: 50px;
+    font-size: 3em;
+}
+
+
+#spodny a{
+    display: inline-block; 
+    width: 46%;
+    height: 100px; 
+
+    font-size: 3em;
+}
+
+footer {
+    height: 5%;
+    font-size: 2.5em;    
+}
+
+p.index_number {
+    font-size: 2em;
+}

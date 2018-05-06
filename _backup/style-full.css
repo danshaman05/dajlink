@@ -1,0 +1,116 @@
+body {
+font-family: Impact, Charcoal, sans-serif;
+background: white;
+}
+
+header {
+    width: 100%;
+    background-color:lightgray;
+    padding: 1.5em 2em 0.5em;
+    color: white;
+}
+
+
+nav {
+    width: 100%;
+    margin: 0 1em;
+    padding:1em;
+    color: gray;
+    float: left;
+    clear: both;
+}
+
+nav a {
+    /* display: inline; */
+    color: black;
+    /* border: 2px solid; */
+    background-color: white;
+    padding: 0.7em;
+    margin: 0.25em;
+    text-decoration: none;
+    float: left;
+}
+
+a:hover {
+    background-color:#d9d9d9;}
+
+article {
+    margin: 0em;
+    padding:0;
+}
+
+article a {
+    text-align: center;
+}
+
+div {
+    width: 100%;
+    float: left;
+}
+
+#div2, #spodny {
+   margin: 25px 0; 
+}
+
+#div1 a, #div2 a {
+    width: 200px;
+    height: 25px;
+    border: 2px solid;
+    float: left;
+
+    padding: 2em 1em;
+    margin: 0.25em;
+    text-decoration: none;
+}
+
+#spodny {
+    width: 100%;
+}
+
+#spodny a {
+    font-size: 0.75em;
+    width: 100px;
+    height: 20px;
+    border: 2px solid;
+    float: left;
+
+    padding: 2em 1em;
+    margin: 0.25em;
+    text-decoration: none;
+}
+
+#sachovnica { 
+    display:none;}
+
+#python_tut {  #neviem preco nefunguje 
+    display:none;
+}
+
+
+#C-Tat {
+    color: red;
+    border-color: red;
+}
+
+
+#list {
+    border-color: forestgreen;
+    color: forestgreen;
+}
+
+#projekt {
+    border-color: burlywood;
+    color: sandybrown;
+}
+
+#PPSP {
+	color: #09c;
+	border-color: #09c;
+}
+
+#odkazy a{
+    margin: 0.5em 0;
+    float:left;
+    display: block;
+    clear: left;
+}

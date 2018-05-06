@@ -1,0 +1,345 @@
+body {
+
+    /* font-family: Impact, Charcoal, sans-serif;  */
+
+     font-family: 'Open Sans', serif; 
+    /* font-family: 'Tangerine', serif;  */
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /*overflow: auto;
+    background-color:lightyellow; */
+    width: 100%;
+    float: left;
+    height: 80px;
+    padding: 1.5em 2em 0.5em;
+    color: black;
+    max-height: 90px;
+}
+
+#logo {
+  width: auto;
+  float: left;
+}
+
+#login {
+    width: 60%;
+    float: right;
+}
+
+#site_name {
+  float: left;
+  width: 20%;
+  margin: 1em; 
+  /*width: 20%;
+  clear: both;*/
+  text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    /*height: 5em; */
+    margin: 1% 0;
+    padding:0;
+    color: gray;
+    background-color: gray; 
+    float: left;
+    clear: both;
+   /* border-bottom: 2px solid black;*/
+}
+
+nav a {
+    /* display: inline; */
+    color: white;
+    /* border: 2px solid; 
+    background-color: white; */
+
+    padding: 0.25em 2em;
+    margin: 0.25em ;
+    float: left;
+
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.4s; /*ease-out;*/
+}
+
+nav a:hover:not(.active) {
+  background-color: lightgray; /* #d9d9d9;*/
+}
+
+nav a.active {
+    background-color: orange;
+}
+
+
+section.index a:hover {
+    background-color: lemonchiffon;
+    transition: all 0.4s ease-out;
+}
+
+section.index {
+
+    margin: 0 1%;
+    padding: 0 1%;
+    width: 100%; 
+    float: left;
+}
+
+section a {
+    text-align: center;
+}
+
+section {
+    margin: 1%;
+    padding: 1%;
+    width: 70%; 
+    float: left;
+}
+
+div.index {
+    width: 100%;
+    float: left;
+}
+
+header p {
+    text-decoration: none;
+    width: 30%;
+    float: left;
+}
+
+
+div.index {
+   margin: 0 0 10px 0;
+}
+
+
+div[id^="div"] a {
+    border: 2px solid;
+    float: left;
+    margin: 0.25em;
+    padding: 2em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+#div1 a, #div2 a{
+    width: 200px;
+    height: 25px;
+
+}
+
+
+#div3 a {
+    font-size: 0.75em;
+    width: 100px;
+    height: 20px;
+    /*margin: 0 0 20%;*/
+}
+
+
+#C-Tat {
+    color: red;
+    border-color: red;
+}
+
+
+#list {
+    border-color: forestgreen;
+    color: forestgreen;
+}
+
+#projekt {
+    border-color: burlywood;
+    color: sandybrown;
+}
+
+#PPSP {
+	color: #09c;
+	border-color: #09c;
+}
+
+#odkazy a {
+    margin: 0.5em 0;
+    float:left;
+    display: block;
+    clear: left;
+}
+
+
+.chyba {
+  color: red;
+}
+
+#edit_cubes {
+    /*margin: auto;*/
+    width: 60%;
+    float: left;
+    /* clear: both; */
+}
+
+#edit_cubes_table {
+    /*padding: 1em;
+    margin: 1em;*/
+    border-spacing: 15px;
+    border-collapse: collapse;
+}
+
+#edit_cubes_table td, th { 
+    border: 1px solid;
+    padding: 0.25em ;
+}
+
+#edit_cubes_table th {
+    background-color: yellow;}
+
+#edit_cubes_button {
+    float: right;
+}
+
+#add_cube {
+    width: auto;
+    float:left;
+    /* clear: both; */
+}
+span {
+    font-weight: bold;
+}
+
+#uprav-navod {
+    margin: 1%;
+    padding: 1%;
+    width: 20%;
+    float: right;
+    background-color: lightgray;
+
+}
+
+p.index_number {
+    float: left;
+    width: 1em;
+    /*height: 30%;*/
+    color: grey;
+    font-size: 70%;
+    margin: 0;
+}
+
+#aside_messages {
+    margin: 1%;
+    padding: 1%;
+    width: 30%;
+    float: right;
+    background-color: lightgray;
+    
+}
+
+#messages_section {
+    margin: 1%;
+    padding: 1%;
+    width: 60%; 
+    float: left;
+}
+
+div[class^="message"] {
+/*    border: 1px solid;*/
+    width: 52%;
+    min-height: 80px;
+    max-height: 330px;
+    /*border: 2px solid;*/
+    border-radius: 3px;
+    float: left;
+
+    padding: 2em 1em;
+    margin: 1% 30%;
+}
+
+div.message0{ 
+    background-color: lightgray;
+}
+
+div.message1{ 
+    background-color: gold;
+}
+div.message2{
+    background-color: lightcoral;
+}
+div.message3{
+    background-color: lightblue;
+}
+div.message4{
+    background-color: plum;
+}
+div.message5{
+    background-color: limegreen;
+}
+div.message6{
+    background-color: skyblue;
+}
+
+div.message7{
+    background-color: BlanchedAlmond; 
+}
+
+p.message_subject, p.message_text {
+    margin: 0 0 0.5em;
+}
+
+p.message_subject {
+    font-weight: bold;
+}
+
+p.message_text {
+    margin: 0 0.5em;
+}
+
+p.message_uid{
+    float: right;
+    color: gray;
+    font-size: 85%;
+}
+
+p.message_time {
+    float: left;
+    color: gray;
+    font-size: 80%;
+}
+
+#login > p.chyba {
+    margin: 0;
+    width: 50%;
+
+}
+
+input.message_check {
+    float: right;
+}
+
+#delete_messages_butt {
+    float: right;
+}
+
+footer {
+    width: 100%;
+    /*height: 2em;*/
+    float: left;
+    background-color: gray;
+    clear: both;
+    position: relative;
+    bottom: 0;
+    margin-top: 5%;
+     
+}
+footer p {
+    float: right;
+    color: white;
+    margin: 0.75em 1em;
+}
+
+/* Toto zatial plati len pre footer na stranke index. (chcem aby sa footer zobrazil uplne dole, miesto toho aby siel hned pod kocky */
+footer.index {
+    position: fixed;
+    bottom: 0px;
+}
+
