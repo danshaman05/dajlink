@@ -1,11 +1,11 @@
 header {
     /* background-color: orange; 
     font-size: 4em; */
-    min-height: 300px;
+    min-height: 160px;
     max-height: 300px;
     
 
-    background-color: orange;
+    background-color: white;
     font-size: 2em;
 
 }
@@ -20,6 +20,7 @@ header {
 }
 
 #login {
+    display: none;
     width: 75%;
     float: left;
     font-size: 1.25em;
@@ -65,8 +66,24 @@ nav a {
 footer {
     height: 5%;
     font-size: 2.5em;    
+    position: static;
 }
 
 p.index_number {
     font-size: 2em;
 }
+
+
+#messages_section {
+    width = 100%;
+}
+
+/* buttons */ 
+#Nastavenia {
+    display: none;
+}
+
+#aside_messages {
+    display: none;
+}
+

@@ -20,7 +20,7 @@ echo "<h3>Nastavenia</h3>";
 #v kazdom riadku bude 1 kocka, - nazov, url, (farba), kategoria (ktory div)
 
 if ($_SESSION['admin']){ #ak je admin 1
-    echo "<p class='chyba'>Vitaj ADMIN! <br>Upravujes defaultnu tabulku rozcestnik_cubes!</p>"; #nie je to chyba, ale len chcem aby bol vypis cervenou
+    echo "<p class='chyba'>Vitaj ADMIN! <br>Upravujes tabulku:  <b>" . $_SESSION['user_table'] . "</b></p>"; #nie je to chyba, ale len chcem aby bol vypis cervenou
 } else {
     echo "<p class='oznam'>Nižšie si môžeš vytvoriť a spravovať vlastné kocky, ktoré sa ti zobrazia iba pri prihlásení (ak sa neprihlásiš, budeš vidieť kocky určené pre študenta odboru AIN na FMFI UK.</p>";
 }
