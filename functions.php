@@ -7,6 +7,9 @@ function head_func(){
 	   <head>
 	      <meta charset="utf-8">
 	      <title>Daniel Grohol</title>
+
+          <link rel='shortcut icon' type='image/x-icon' href='img/favico.ico' /> <!-- Edited 5.9.2018 -->
+
 	      <link rel="stylesheet" href="style-full.css" media="all" />
 	      <link rel="stylesheet" href="style-mini.css" media="screen and (max-device-width:482px)" />
 	      <!-- <script src="script.js"></script> -->
@@ -17,8 +20,12 @@ function head_func(){
 	   <body>
 
       <header>
-		<a href="index.php"><img src="img/mensi.png" alt="logo" id="logo"></a> 
-        <a href="index.php" id="site_name">Rozcestník matfyzáka</a>
+        <?php $linkToIndex = "index.php?year=". $_GET['year'];
+        echo '<a href="' . $linkToIndex . '"><img src="img/mensi.png" alt="logo" id="logo"></a>';
+        echo '<a href="' . $linkToIndex . '" id="site_name">Rozcestnik matfyzaka</a>';
+        ?>
+     
+
 
      <div id='login'>
     <?php
@@ -41,7 +48,9 @@ function head_func(){
 
 				session_unset();
                 session_destroy();
-                header("Location: index.php"); # po stlaceni "Odhlas" tlacidla sa presmeruje na index.php (nemoze ostat na uprav.php!) 
+                
+                // $link=. $_GET['year']; // NEFUNGUJE - neviem preco 
+                header("Location: $linkToIndex"); # po stlaceni "Odhlas" tlacidla sa presmeruje na index.php (nemoze ostat na uprav.php!) 
 
 			}
 
@@ -63,7 +72,7 @@ function head_func(){
 			<form method="post">
 			 <table>
 				<tr>
-				 <td><label for="email">Email:</label></td>
+				 <td><label for="email">Prihlasovacie meno:</label></td>
 				 <td><label for="pass">Heslo:</label></td>
 				 <td><a href="register.php">Registrácia</a></td>
 				</tr>
@@ -89,7 +98,7 @@ function head_func(){
 
 function footer_func($class=''){
     echo "<footer class='" . $class . "'>";
-    echo "<p>2017&copy;, Daniel Grohoľ</p>";
+    echo "<p>2018&copy;, Daniel Grohoľ, FMFI UK</p>";
     echo "</footer>";
 }
 
@@ -150,7 +159,7 @@ function pridaj_pouzivatela() {
 
             if ($newtable = $mysqli->query($sql_user)) { //ak uspesne vytvorilo tabulku pre usera ($newtable je 1)
                 // echo "Tabulka $newtable bola vytvorena." . "\n"; //test ci vytvori tabulku
-                $sql_copy = "INSERT INTO user$user_id SELECT * FROM rozcestnik_cubes"; //dopyt - kopia defaultnej tabulky
+                $sql_copy = "INSERT INTO user$user_id SELECT * FROM rozcestnik_cubes" . $_GET['year']; //dopyt - kopia defaultnej tabulky
                 if ($copy_ok = $mysqli->query($sql_copy)) {
                   //  echo "Kopia hotova."; //ak sa kopia podarila
                 } else  { echo '<p class="chyba">Kopirovanie z defaultnej tabulky zlyhalo. Kontaktujte administratora.</p>'; }
@@ -197,7 +206,7 @@ function zapis_user_table($user_id){
 }
 
 function print_cubes($category) { #category = 1 -primary, 2 - secondary, 3 -others
-    $src = isset($_SESSION['user_table']) ? $_SESSION['user_table'] : "rozcestnik_cubes";
+    $src = isset($_SESSION['user_table']) ? $_SESSION['user_table'] : "rozcestnik_cubes" . $_GET['year'];
     global $mysqli;
     if (!$mysqli->connect_errno) {
 
@@ -208,7 +217,7 @@ function print_cubes($category) { #category = 1 -primary, 2 - secondary, 3 -othe
                 echo "<a target='_blank' id='" . $row['cube_id'] . "' href='" . $row['url'] . "'>" . $row['name'] ."</a>";
             }
         } else { echo '<p class="chyba">Kocky: Dopyt sa nepodaril ' .  // dopyt sa nepodaril
-           // "Chyba: " . $mysqli->error;  //defaultne nezobrazujeme chyby
+            "Chyba: " . $mysqli->error;  //defaultne nezobrazujeme chyby
             ".</p>";
         }
     }
@@ -464,10 +473,14 @@ function navigation($selected){ #ak kliknem na link, prida sa mu trieda 'active'
 ?>
 <nav>
 <?php
-    $nav = array("index.php"=>"Kocky", "odkazy.php"=>"Odkazy", "uprav.php"=>"Nastavenia"); #pole
+    $appendix = "?year=" . $_GET['year'];
+    $keyIndex = "index.php" . $appendix;
+    $keyOdkazy = "odkazy.php" . $appendix;
+    $keyUprav = "uprav.php" . $appendix;
+    $nav = array($keyIndex=>"Kocky", $keyOdkazy=>"Odkazy", $keyUprav=>"Nastavenia"); #pole
     #if (isset($_SESSION['email'])){
         foreach ($nav as $page => $name){
-            echo "<a href='$page'";
+            echo "<a href='$page' id='$name'";
             if ($selected == $page) echo " class='active'";
             echo ">$name</a>";
         }
