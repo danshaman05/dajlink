@@ -1,4 +1,4 @@
-dajlink.tk
+# dajlink.tk
 ************************************************************
 - Rozcestnik matfyzaka
 
@@ -6,7 +6,7 @@ Stránka určená študentom aplikovanej informatiky na matfyze.
 
 ************************************************************
 
-NOTES:
+## NOTES:
 ************************************************************
 
 stranka bude obsahovat:
@@ -46,7 +46,7 @@ Ake stranky budu:
     na jednej bude administracia - bude to len pre mna stranka - budem moct tam mazat / pridavat clenov / upravovat
 
 
-Bugy / Whishlist:
+## Bugy / Whishlist:
 
 	ak vypisem meno do login a meno je zle, nech zostane vypisane
 	registraciu dat do tabulky
