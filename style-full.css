@@ -343,7 +343,7 @@ footer p {
 
 /* Toto zatial plati len pre footer na stranke index. (chcem aby sa footer zobrazil uplne dole, miesto toho aby siel hned pod kocky */
 footer.index {
-    position: static;
+    position: fixed;
     bottom: 0px;
 }
 
